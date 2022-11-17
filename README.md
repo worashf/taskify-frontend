@@ -1,6 +1,6 @@
 # taskify-frontend
 
-> Task management application Built by ReactJS, Redux Toolkit. User can create kanban board for project, add tasks for project, update tasks state and Assign person.
+> Task management application Built by ReactJS, Redux Toolkit. Users can create a kanban board for the project, add tasks for the project, update the tasks state and Assign a person.
 
 ## Built With
 
