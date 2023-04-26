@@ -1,5 +1,6 @@
 import React from 'react'
  import {Box} from "@mui/material"
+import SocialCard from '../components/footer/SocialCard'
 const Footer = () => {
   return (
     <Box sx={{
@@ -11,7 +12,8 @@ const Footer = () => {
  
       
     }}>
-    
+        
+    <SocialCard/>
    </Box>
   )
 }
