@@ -5,19 +5,35 @@ import { useMode, ColorModeContext } from "./theme";
 import Footer from "./layout/Footer";
 import Header from "./layout/Header";
 import SideBar from "./layout/Sidebar";
+import Signup from "./pages/Signup";
+import Login from "./pages/Login";
 function App() {
   const [theme, colorMode] = useMode();
+  const [t, setT] = useState(false);
 
   return (
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <div className="app">
-          <SideBar />
-          <main className="content">
-            <Header />
-            <Routes></Routes>
-          </main>
+          {t ? (
+            <>
+              {" "}
+              <SideBar />
+              <main className="content">
+                <Header />
+                <Routes>
+                  <Route path="/signup" element={<Signup />} />
+                  <Route path="/login" element={<Login />} />
+                </Routes>
+              </main>
+            </>
+          ) : (
+            <Routes>
+              <Route path="/signup" element={<Signup />} />
+              <Route path="/login" element={<Login />} />
+            </Routes>
+          )}
         </div>
       </ThemeProvider>
     </ColorModeContext.Provider>

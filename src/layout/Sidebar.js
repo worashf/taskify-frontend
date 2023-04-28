@@ -126,14 +126,14 @@ const SideBar = () => {
 
             <Menuitem
               title="Teams"
-              to="/team"
+              to="/login"
               icon={<GroupAddOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
             <Menuitem
               title="Meetings"
-              to="/contacts"
+              to="/signup"
               icon={<DuoOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
