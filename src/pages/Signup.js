@@ -10,10 +10,10 @@ import {
   Link,
   InputAdornment,
 } from "@mui/material";
+import { Link as RouterLink } from "react-router-dom";
 import { useState } from "react";
 import { Form, useFormik, FormikProvider } from "formik";
 import * as Yup from "yup";
-import { styled } from "@emotion/styled";
 import { tokens } from "../theme";
 import { motion } from "framer-motion";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
@@ -34,15 +34,6 @@ const fadeInUp = {
       duration: 0.6,
       ease: easing,
     },
-  },
-};
-const animate = {
-  opacity: 1,
-  y: 0,
-  transition: {
-    duration: 0.6,
-    ease: easing,
-    delay: 0.16,
   },
 };
 
@@ -69,7 +60,9 @@ const Signup = () => {
   });
   const formik = useFormik({
     initialValues: {
-      username: "",
+      firstName: "",
+      lastName: "",
+      email: "",
       password: "",
     },
     validationSchema: userSchema,
@@ -89,7 +82,7 @@ const Signup = () => {
           margin: " 30px  auto",
           minWidth: "50%",
           maxWidth: "90%",
-          height: { sm: 1, md: "80vh", lg: "80vh" },
+          height: { sm: 1, md: "400px", lg: "500px" },
           padding: "20px",
           borderRadius: "10px",
           backgroundColor: colors.primary[400],
@@ -113,15 +106,12 @@ const Signup = () => {
               {...fadeInUp}
             >
               <Typography variant="h3" sx={{ color: "text.secondary" }}>
-                Enter Your Details
+                Create a new account
               </Typography>
             </Divider>
           </Box>
         </Box>
-        <Form
-          onSubmit={handleSubmit}
-          className={theme.palette.mode === "dark" ? "form-dark" : "form-light"}
-        >
+        <Form onSubmit={handleSubmit}>
           <Stack
             direction={{ xs: "column", sm: "row" }}
             spacing={{ md: 3, xs: 2 }}
@@ -260,6 +250,33 @@ const Signup = () => {
             </Button>
           </Stack>
         </Form>
+        <Divider sx={{ mt: 4 }}>
+          <Box>
+            <Typography
+              component={motion.p}
+              {...fadeInUp}
+              variant="h4"
+              sx={{
+                color: colors.blueAccent[300],
+              }}
+            >
+              Have an account?{" "}
+              <Link
+                variant="h4"
+                sx={{
+                  color: colors.grey[300],
+                  padding: 2,
+                  textDecoration: "underline",
+                  "&:hover": { color: colors.grey[200] },
+                }}
+                component={RouterLink}
+                to="/login"
+              >
+                Login
+              </Link>
+            </Typography>
+          </Box>
+        </Divider>
       </Box>
     </FormikProvider>
   );
