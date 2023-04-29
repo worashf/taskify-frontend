@@ -32,13 +32,3 @@ body,
 }
 
 
-.form-dark{
-  border:  1px solid #d3cfcf;
-  padding: 10px;
-  border-radius: 10px;
-}
-.form-light{
-  border:  1px solid #a4a3a3;
-  padding: 10px;
-  border-radius: 10px;
-}
