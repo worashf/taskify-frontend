@@ -208,7 +208,11 @@ const Login = () => {
           </Box>
         </Form>
         <Divider sx={{ mt: 4 }}>
-          <Box>
+          <Box
+            display="flex"
+            flexDirection={{ xs: "column", md: "row" }}
+            alignItems="center"
+          >
             <Typography
               component={motion.p}
               {...fadeInUp}
@@ -218,20 +222,20 @@ const Login = () => {
               }}
             >
               Haven't an account?{" "}
-              <Link
-                variant="h4"
-                sx={{
-                  color: colors.grey[300],
-                  padding: 2,
-                  textDecoration: "underline",
-                  "&:hover": { color: colors.grey[200] },
-                }}
-                component={RouterLink}
-                to="/signup"
-              >
-                Create new account
-              </Link>
             </Typography>
+            <Link
+              variant="h4"
+              sx={{
+                color: colors.grey[300],
+                padding: 2,
+                textDecoration: "underline",
+                "&:hover": { color: colors.grey[200] },
+              }}
+              component={RouterLink}
+              to="/signup"
+            >
+              Create new account
+            </Link>
           </Box>
         </Divider>
       </Box>
