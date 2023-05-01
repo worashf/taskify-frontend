@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 import { Box, Divider, Typography, useTheme } from "@mui/material";
 import { Sidebar, Menu, MenuItem, useProSidebar } from "react-pro-sidebar";
-import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
-import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
-import ContactsOutlinedIcon from "@mui/icons-material/ContactsOutlined";
-import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
+
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import AccountTreeIcon from "@mui/icons-material/AccountTree";
 import GroupAddOutlinedIcon from "@mui/icons-material/GroupAddOutlined";
@@ -74,7 +71,7 @@ const SideBar = () => {
               </Box>
             )}
           </Box>
-          <Divider />
+
           {!collapsed && (
             <Box my="10px">
               <Box
