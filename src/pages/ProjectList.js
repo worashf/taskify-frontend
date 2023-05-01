@@ -27,7 +27,10 @@ const projects = [
   { name: "Create app", status: "open" },
   { name: "Create app", status: "open" },
   { name: "Create app", status: "open" },
-  { name: "Create app", status: "open" },
+  {
+    name: "Create app Create app Create app Create app import MoreVertOutlinedIcon from '@mui/icons-material/MoreVertOutlined';",
+    status: "open",
+  },
 ];
 
 const openedProjects = projects.filter((item) => item.status === "open");
