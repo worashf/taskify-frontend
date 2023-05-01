@@ -17,7 +17,7 @@ import {
   RadioGroup,
   Stack,
 } from "@mui/material";
-import { Divider } from "antd";
+
 import React, { useState } from "react";
 
 const SocialCard = () => {
@@ -170,11 +170,7 @@ const SocialCard = () => {
         </Grid>
       </Grid>
 
-      <Stack
-        spacing={5}
-        direction="row"
-       
-      >
+      <Stack spacing={5} direction="row">
         <Paper
           sx={{
             width: 100,

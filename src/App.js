@@ -7,9 +7,10 @@ import Header from "./layout/Header";
 import SideBar from "./layout/Sidebar";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
+import ProjectList from "./pages/ProjectList";
 function App() {
   const [theme, colorMode] = useMode();
-  const [t, setT] = useState(false);
+  const [t, setT] = useState(true);
 
   return (
     <ColorModeContext.Provider value={colorMode}>
@@ -23,7 +24,7 @@ function App() {
               <main className="content">
                 <Header />
                 <Routes>
-                  <Route path="/signup" element={<Signup />} />
+                  <Route path="/" element={<ProjectList />} />
                   <Route path="/login" element={<Login />} />
                 </Routes>
               </main>
