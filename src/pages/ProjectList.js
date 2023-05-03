@@ -84,7 +84,7 @@ const ProjectList = () => {
             }}
           >
             <DonutLargeOutlined
-              sx={{ color: colors.greenAccent[700], fontSize: "30px" }}
+              sx={{ color: colors.blueAccent[400], fontSize: "30px" }}
             />
 
             <Typography
@@ -108,7 +108,11 @@ const ProjectList = () => {
             }}
           >
             {openedProjects.map((item) => (
-              <ProjectItem name={item.name} status={item.status} />
+              <ProjectItem
+                name={item.name}
+                status={item.status}
+                titleColor={colors.blueAccent[400]}
+              />
             ))}
           </Box>
         </Grid>
@@ -123,7 +127,7 @@ const ProjectList = () => {
             }}
           >
             <CheckCircleOutlineOutlined
-              sx={{ color: colors.greenAccent[700], fontSize: "30px" }}
+              sx={{ color: colors.redAccent[600], fontSize: "30px" }}
             />
 
             <Typography
@@ -131,7 +135,7 @@ const ProjectList = () => {
               sx={{
                 fontWeight: "bold",
                 fontStyle: "italic",
-                color: colors.blueAccent[400],
+                color: colors.redAccent[600],
               }}
             >
               Finished
@@ -147,7 +151,11 @@ const ProjectList = () => {
             }}
           >
             {finishedProjects.map((item) => (
-              <ProjectItem name={item.name} status={item.status} />
+              <ProjectItem
+                name={item.name}
+                status={item.status}
+                titleColor={colors.redAccent[600]}
+              />
             ))}
           </Box>
         </Grid>
