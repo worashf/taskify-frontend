@@ -44,7 +44,7 @@ const ProjectItem = ({ name, status, titleColor }) => {
 
   return (
     <Paper
-      elevation="100px"
+      elevation={1}
       sx={{
         backgroundColor: `${
           status === "open" ? colors.primary[400] : colors.greenAccent[600]
