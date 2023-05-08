@@ -17,16 +17,16 @@ import {
 import ProjectItem from "../components/project/ProjectItem";
 
 const projects = [
-  { name: "Create app", status: "open" },
-  { name: "Create app", status: "open" },
-  { name: "Create app", status: "finished" },
-  { name: "Create app", status: "finished" },
-  { name: "Create app", status: "finished" },
-  { name: "Create app", status: "finished" },
-  { name: "Create app", status: "open" },
-  { name: "Create app", status: "open" },
-  { name: "Create app", status: "open" },
-  { name: "Create app", status: "open" },
+  { name: "Create app1", status: "open" },
+  { name: "Create app2", status: "open" },
+  { name: "Create app3", status: "finished" },
+  { name: "Create app4", status: "finished" },
+  { name: "Create app5", status: "finished" },
+  { name: "Create app6", status: "finished" },
+  { name: "Create app7", status: "open" },
+  { name: "Create app8", status: "open" },
+  { name: "Create app9", status: "open" },
+  { name: "Create app10", status: "open" },
   {
     name: "Create app Create app Create app Create app import MoreVertOutlinedIcon from '@mui/icons-material/MoreVertOutlined';",
     status: "open",
@@ -109,6 +109,7 @@ const ProjectList = () => {
           >
             {openedProjects.map((item) => (
               <ProjectItem
+                key={item.name}
                 name={item.name}
                 status={item.status}
                 titleColor={colors.blueAccent[400]}
@@ -152,6 +153,7 @@ const ProjectList = () => {
           >
             {finishedProjects.map((item) => (
               <ProjectItem
+                key={item.name}
                 name={item.name}
                 status={item.status}
                 titleColor={colors.redAccent[600]}
